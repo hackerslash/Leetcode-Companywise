@@ -1,4 +1,4 @@
-# LeetCode Companywise
+# LeetCode Companywise Questions
 
 A modern, interactive dashboard to practice LeetCode questions filtered by company, frequency, and difficulty. Track your progress and visualize your stats to prepare effectively for interviews.
 
