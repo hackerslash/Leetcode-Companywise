@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Moon, Sun, UserCircle } from 'lucide-react';
+import { Search, Moon, Sun, BarChart2 } from 'lucide-react';
 
 export default function Sidebar({ companies, selectedCompany, onSelectCompany, companySearch, onSearchChange, darkMode, toggleDarkMode, onProfileClick }) {
   const filteredCompanies = companies.filter(c => 
@@ -15,9 +15,9 @@ export default function Sidebar({ companies, selectedCompany, onSelectCompany, c
              <button
               onClick={onProfileClick}
               className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition-colors"
-              aria-label="User Profile"
+              aria-label="Statistics"
             >
-              <UserCircle className="w-5 h-5" />
+              <BarChart2 className="w-5 h-5" />
             </button>
             <button
               onClick={toggleDarkMode}
