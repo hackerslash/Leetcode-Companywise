@@ -134,6 +134,10 @@ function App() {
   useEffect(() => {
     if (!selectedCompany) return;
 
+    // Prevent fetching if the selected period is not valid for the current company
+    // This prevents 404s when switching companies with different available periods
+    if (!availablePeriods.includes(selectedPeriod)) return;
+
     setLoading(true);
     const fileName = `${selectedPeriod}.csv`;
     
