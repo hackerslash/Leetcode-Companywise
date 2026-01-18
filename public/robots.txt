@@ -1,0 +1,6 @@
+# robots.txt for LeetCode Companywise
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lc-companywise.hackerslash.dev/sitemap.xml
