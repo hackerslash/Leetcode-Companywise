@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LC Companywise">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c6b5a" />
+      <stop offset="100%" stop-color="#c48a4c" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="#121312" />
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#g)" opacity="0.16" />
+  <path d="M18 19h8v26h18v8H18z" fill="#f3efe6" />
+  <path d="M30 19h16v8H30z" fill="#f3efe6" />
+  <path d="M46 27v26h-8V27z" fill="#f3efe6" />
+</svg>
