@@ -68,47 +68,47 @@ export default function ProfilePage({ onBack, solvedState, companies, solvedMeta
 
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 font-sans transition-colors duration-200">
-      <div className="max-w-7xl mx-auto p-4 md:p-8">
+    <div className="min-h-screen bg-atmosphere transition-colors duration-200 grain">
+      <div className="max-w-7xl mx-auto p-4 md:p-10">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 mb-8 transition-colors"
+          className="flex items-center gap-2 text-[var(--muted)] hover:text-[var(--accent)] mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
           <span>Back to Questions</span>
         </button>
 
-        <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-8">Your Progress Profile</h1>
+        <h1 className="text-3xl md:text-4xl font-display text-[var(--ink)] mb-8">Your Progress Profile</h1>
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4">
-            <div className="p-3 bg-teal-50 dark:bg-teal-900/30 rounded-lg text-teal-600 dark:text-teal-400">
+          <div className="card-surface dark:card-surface-dark p-6 rounded-3xl flex items-center gap-4">
+            <div className="p-3 bg-[var(--accent)]/10 rounded-2xl text-[var(--accent)]">
               <Trophy className="w-8 h-8" />
             </div>
             <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Total Solved</p>
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">{solvedStats.total}</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Total Solved</p>
+              <p className="text-3xl font-display text-[var(--ink)]">{solvedStats.total}</p>
             </div>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4">
-            <div className="p-3 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg text-indigo-600 dark:text-indigo-400">
+          <div className="card-surface dark:card-surface-dark p-6 rounded-3xl flex items-center gap-4">
+            <div className="p-3 bg-[var(--accent-2)]/15 rounded-2xl text-[var(--accent-2)]">
               <Building2 className="w-8 h-8" />
             </div>
             <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Companies Practiced</p>
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">{Object.keys(solvedStats.companyCounts).length}</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Companies Practiced</p>
+              <p className="text-3xl font-display text-[var(--ink)]">{Object.keys(solvedStats.companyCounts).length}</p>
             </div>
           </div>
 
-           <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4">
-            <div className="p-3 bg-purple-50 dark:bg-purple-900/30 rounded-lg text-purple-600 dark:text-purple-400">
+           <div className="card-surface dark:card-surface-dark p-6 rounded-3xl flex items-center gap-4">
+            <div className="p-3 bg-[var(--accent-3)]/15 rounded-2xl text-[var(--accent-3)]">
               <Target className="w-8 h-8" />
             </div>
             <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Focus Area</p>
-              <p className="text-lg font-bold text-gray-900 dark:text-white">
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Focus Area</p>
+              <p className="text-lg font-display text-[var(--ink)]">
                 {companyData.length > 0 ? companyData[0].name : 'None'}
               </p>
             </div>
@@ -118,8 +118,8 @@ export default function ProfilePage({ onBack, solvedState, companies, solvedMeta
         {/* Charts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Company Distribution */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Questions per Company (Top 10)</h2>
+          <div className="card-surface dark:card-surface-dark p-6 rounded-3xl">
+            <h2 className="text-lg font-display text-[var(--ink)] mb-6">Questions per Company (Top 10)</h2>
             <div className="h-[300px] w-full">
               {companyData.length > 0 ? (
                 <ResponsiveContainer width="100%" height="100%">
@@ -139,14 +139,14 @@ export default function ProfilePage({ onBack, solvedState, companies, solvedMeta
                       ))}
                     </Pie>
                     <Tooltip 
-                      contentStyle={{ backgroundColor: '#1f2937', borderColor: '#374151', color: '#fff' }}
+                      contentStyle={{ backgroundColor: 'rgba(20, 22, 20, 0.9)', borderColor: 'rgba(255, 255, 255, 0.1)', color: '#fff' }}
                       itemStyle={{ color: '#fff' }}
                     />
                     <Legend />
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="h-full flex items-center justify-center text-gray-400 dark:text-gray-500">
+                <div className="h-full flex items-center justify-center text-[var(--muted)]">
                   No data available yet
                 </div>
               )}
@@ -154,8 +154,8 @@ export default function ProfilePage({ onBack, solvedState, companies, solvedMeta
           </div>
 
           {/* Difficulty Distribution */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Difficulty Distribution</h2>
+          <div className="card-surface dark:card-surface-dark p-6 rounded-3xl">
+            <h2 className="text-lg font-display text-[var(--ink)] mb-6">Difficulty Distribution</h2>
             <div className="h-[300px] w-full">
                {difficultyData.length > 0 ? (
                 <ResponsiveContainer width="100%" height="100%">
@@ -175,7 +175,7 @@ export default function ProfilePage({ onBack, solvedState, companies, solvedMeta
                       ))}
                     </Pie>
                     <Tooltip 
-                      contentStyle={{ backgroundColor: '#1f2937', borderColor: '#374151', color: '#fff' }}
+                      contentStyle={{ backgroundColor: 'rgba(20, 22, 20, 0.9)', borderColor: 'rgba(255, 255, 255, 0.1)', color: '#fff' }}
                       itemStyle={{ color: '#fff' }}
                     />
                     <Legend />
@@ -183,10 +183,10 @@ export default function ProfilePage({ onBack, solvedState, companies, solvedMeta
                 </ResponsiveContainer>
               ) : (
                 <div className="h-full flex flex-col items-center justify-center text-center p-4">
-                  <p className="text-gray-500 dark:text-gray-400 mb-2">
+                  <p className="text-[var(--muted)] mb-2">
                     No difficulty data available yet.
                   </p>
-                  <p className="text-sm text-gray-400 dark:text-gray-500">
+                  <p className="text-sm text-[var(--muted)]">
                     Visit company pages to load and track question difficulties.
                   </p>
                 </div>

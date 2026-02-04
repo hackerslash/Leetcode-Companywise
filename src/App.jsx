@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Papa from 'papaparse';
-import { Filter, SortAsc, LayoutList } from 'lucide-react';
+import { Filter, SortAsc } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import QuestionTable from './components/QuestionTable';
 import Stats from './components/Stats';
@@ -252,7 +252,9 @@ function App() {
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 font-sans transition-colors duration-200">
+    <div className="relative min-h-screen bg-atmosphere transition-colors duration-200 grain">
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-black/[0.03] dark:to-white/[0.04]"></div>
+      <div className="relative flex min-h-screen">
       <Sidebar 
         companies={companies.map(c => c.name)}
         selectedCompany={selectedCompany?.name || ''}
@@ -270,19 +272,19 @@ function App() {
 
       <div className="flex-1 min-w-0 flex flex-col h-screen overflow-hidden">
         {/* Mobile Header */}
-        <div className="md:hidden bg-white dark:bg-gray-800 p-4 shadow-sm z-20 flex items-center justify-between border-b dark:border-gray-700">
-          <h1 className="font-bold text-lg text-teal-600 dark:text-teal-400">LC Companywise</h1>
+        <div className="md:hidden bg-[var(--surface)]/90 backdrop-blur-md p-4 shadow-sm z-20 flex items-center justify-between border-b border-black/5 dark:border-white/10">
+          <h1 className="font-display text-lg text-[var(--accent)]">LC Companywise</h1>
           <div className="flex gap-2">
             <button
               onClick={() => setCurrentView('profile')}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
+              className="p-2 rounded-full bg-black/5 dark:bg-white/10 text-[var(--muted)]"
             >
-              <div className="w-6 h-6 rounded-full bg-teal-100 dark:bg-teal-900/50 flex items-center justify-center text-teal-700 dark:text-teal-300 font-bold text-xs">
+              <div className="w-6 h-6 rounded-full bg-[var(--accent)]/10 flex items-center justify-center text-[var(--accent)] font-bold text-xs">
                 U
               </div>
             </button>
             <select 
-              className="p-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 text-sm max-w-[150px]"
+              className="p-2 border rounded-lg bg-[var(--surface)] dark:bg-[var(--surface)] dark:text-[var(--ink)] border-black/10 dark:border-white/10 text-sm max-w-[150px]"
               value={selectedCompany?.name || ''}
               onChange={(e) => {
                 const company = companies.find(c => c.name === e.target.value);
@@ -294,33 +296,33 @@ function App() {
           </div>
         </div>
 
-        <main className="flex-1 overflow-y-auto p-4 md:p-8 md:pl-10">
+        <main className="flex-1 overflow-y-auto p-4 md:p-10 md:pl-12">
           <div className="max-w-6xl mx-auto space-y-8 pb-20">
-            <header>
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-                <div>
-                   <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight capitalize mb-2">
+            <header className="rise-in">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+                <div className="space-y-3">
+                   <h2 className="text-3xl md:text-4xl font-display text-[var(--ink)] tracking-tight capitalize">
                     {selectedCompany?.name}
                    </h2>
-                   <div className="flex flex-col gap-1">
-                     <p className="text-gray-500 dark:text-gray-400">Practice most frequent questions asked by {selectedCompany?.name}</p>
+                   <div className="flex flex-col gap-1 text-sm md:text-base">
+                     <p className="text-[var(--muted)]">Curated, high-signal interview questions from {selectedCompany?.name}.</p>
                      {lastUpdated && (
-                       <p className="text-xs text-gray-400 dark:text-gray-500">
-                         Last updated: {formatDate(lastUpdated)}
+                       <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
+                         Updated {formatDate(lastUpdated)}
                        </p>
                      )}
                    </div>
                 </div>
                 
-                <div className="bg-white dark:bg-gray-800 p-1 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 inline-flex flex-wrap gap-1">
+                <div className="bg-[var(--surface)]/90 backdrop-blur p-1.5 rounded-2xl shadow-[var(--shadow-soft)] border border-black/5 dark:border-white/10 inline-flex flex-wrap gap-1">
                   {availablePeriods.map(key => (
                     <button
                       key={key}
                       onClick={() => setSelectedPeriod(key)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                         selectedPeriod === key 
-                        ? 'bg-gray-900 dark:bg-gray-700 text-white shadow-md' 
-                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
+                        ? 'bg-[var(--ink)] text-[var(--surface)] shadow-md' 
+                        : 'text-[var(--muted)] hover:bg-black/5 dark:hover:bg-white/10 hover:text-[var(--ink)]'
                       }`}
                     >
                       {PERIODS[key]}
@@ -332,13 +334,13 @@ function App() {
               <Stats solvedCount={solvedCount} totalCount={questions.length} />
 
               {/* Filters */}
-              <div className="flex flex-col md:flex-row gap-4 mb-6 sticky top-0 md:relative z-10 bg-gray-50 dark:bg-gray-900 md:bg-transparent dark:md:bg-transparent py-2 md:py-0 transition-colors duration-200">
+              <div className="flex flex-col md:flex-row gap-4 mb-6 sticky top-0 md:relative z-10 bg-[var(--bg)]/80 backdrop-blur md:bg-transparent py-2 md:py-0 transition-colors duration-200">
                 <div className="relative flex-1">
-                  <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
                   <input 
                     type="text" 
                     placeholder="Filter questions..." 
-                    className="w-full pl-9 pr-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm text-sm focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none dark:text-gray-200 dark:placeholder-gray-500"
+                    className="w-full pl-9 pr-4 py-2.5 bg-[var(--surface)] border border-black/10 dark:border-white/10 rounded-2xl shadow-[var(--shadow-soft)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)] dark:text-[var(--ink)] dark:placeholder-[var(--muted)]"
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                   />
@@ -346,9 +348,9 @@ function App() {
                 
                 <div className="flex gap-3">
                   <div className="relative">
-                    <Filter className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <Filter className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
                     <select 
-                      className="pl-9 pr-8 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm text-sm appearance-none focus:ring-2 focus:ring-teal-500/20 outline-none cursor-pointer dark:text-gray-200"
+                      className="pl-9 pr-8 py-2.5 bg-[var(--surface)] border border-black/10 dark:border-white/10 rounded-2xl shadow-[var(--shadow-soft)] text-sm appearance-none focus:ring-2 focus:ring-[var(--accent)]/20 outline-none cursor-pointer dark:text-[var(--ink)]"
                       value={difficultyFilter}
                       onChange={e => setDifficultyFilter(e.target.value)}
                     >
@@ -360,9 +362,9 @@ function App() {
                   </div>
 
                   <div className="relative">
-                    <SortAsc className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <SortAsc className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
                     <select 
-                      className="pl-9 pr-8 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm text-sm appearance-none focus:ring-2 focus:ring-teal-500/20 outline-none cursor-pointer dark:text-gray-200"
+                      className="pl-9 pr-8 py-2.5 bg-[var(--surface)] border border-black/10 dark:border-white/10 rounded-2xl shadow-[var(--shadow-soft)] text-sm appearance-none focus:ring-2 focus:ring-[var(--accent)]/20 outline-none cursor-pointer dark:text-[var(--ink)]"
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
                     >
@@ -385,6 +387,7 @@ function App() {
             />
           </div>
         </main>
+      </div>
       </div>
     </div>
   );
