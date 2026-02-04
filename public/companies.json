@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-24",
+  "lastUpdated": "2026-02-04",
   "companies": [
     {
       "name": "1kosmos",
@@ -4149,10 +4149,6 @@
         "six-months.csv",
         "three-months.csv"
       ]
-    },
-    {
-      "name": "src",
-      "files": []
     },
     {
       "name": "stackadapt",

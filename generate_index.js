@@ -20,7 +20,7 @@ try {
             name: company,
             files: files
         };
-    });
+    }).filter(company => company.files.length > 0);
 
     const outputData = {
         lastUpdated: new Date().toISOString().split('T')[0],
@@ -28,7 +28,7 @@ try {
     };
 
     fs.writeFileSync(outputFile, JSON.stringify(outputData, null, 2));
-    console.log(`Generated companies.json with ${companies.length} companies and date ${outputData.lastUpdated}.`);
+    console.log(`Generated companies.json with ${companyData.length} companies and date ${outputData.lastUpdated}.`);
 } catch (err) {
     console.error('Error scanning directory:', err);
 }

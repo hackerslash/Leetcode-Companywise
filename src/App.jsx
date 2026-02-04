@@ -21,6 +21,7 @@ function App() {
   const [selectedPeriod, setSelectedPeriod] = useState('thirty-days');
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState('All');
   const [sortBy, setSortBy] = useState('Frequency');
@@ -139,6 +140,7 @@ function App() {
     if (!availablePeriods.includes(selectedPeriod)) return;
 
     setLoading(true);
+    setError('');
     const fileName = `${selectedPeriod}.csv`;
     
     fetch(`/data/${selectedCompany.name}/${fileName}`)
@@ -151,11 +153,18 @@ function App() {
           header: true,
           skipEmptyLines: true,
           complete: (results) => {
-            setQuestions(results.data);
+            if (results.errors && results.errors.length > 0) {
+              console.error('CSV parse errors:', results.errors);
+              setError('Failed to parse data for this company/period.');
+              setQuestions([]);
+            } else {
+              setQuestions(results.data);
+            }
             setLoading(false);
           },
           error: (err) => {
             console.error(err);
+            setError('Failed to parse data for this company/period.');
             setQuestions([]);
             setLoading(false);
           }
@@ -163,6 +172,7 @@ function App() {
       })
       .catch(err => {
         console.error(err);
+        setError('Failed to load questions for this company/period.');
         setQuestions([]);
         setLoading(false);
       });
@@ -368,6 +378,7 @@ function App() {
             <QuestionTable 
               questions={processedQuestions} 
               loading={loading}
+              error={error}
               solvedState={solvedState}
               onToggleSolved={toggleSolved}
               selectedCompany={selectedCompany?.name || ''}

@@ -1,12 +1,23 @@
 import React from 'react';
 import { ExternalLink, Check, BarChart2 } from 'lucide-react';
 
-export default function QuestionTable({ questions, loading, solvedState, onToggleSolved, selectedCompany }) {
+export default function QuestionTable({ questions, loading, error, solvedState, onToggleSolved, selectedCompany }) {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-gray-400 dark:text-gray-500 animate-pulse">
         <div className="h-8 w-8 bg-gray-200 dark:bg-gray-700 rounded-full mb-4"></div>
         <p>Loading questions...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center py-20 bg-white dark:bg-gray-800 rounded-xl border border-red-100 dark:border-red-900/40 shadow-sm">
+        <p className="text-red-600 dark:text-red-400 font-medium">{error}</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Try switching the time period or company.
+        </p>
       </div>
     );
   }
