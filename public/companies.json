@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-04",
+  "lastUpdated": "2026-04-26",
   "companies": [
     {
       "name": "1kosmos",
@@ -61,7 +61,9 @@
       "name": "activision",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -77,6 +79,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -127,6 +130,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -226,7 +230,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -295,7 +300,9 @@
       "name": "anyscale",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -358,7 +365,9 @@
       "name": "aqr-capital-management-llc",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -392,6 +401,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -463,7 +473,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -503,6 +514,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -634,7 +646,8 @@
       "name": "boeing",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -650,6 +663,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -687,7 +701,8 @@
       "name": "bridgewater-associates",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -730,6 +745,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -767,6 +783,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -785,7 +802,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -799,7 +817,10 @@
       "name": "carwale",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -824,6 +845,14 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv"
+      ]
+    },
+    {
+      "name": "cerner",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -857,7 +886,10 @@
       "name": "chime",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -906,7 +938,9 @@
       "name": "citi",
       "files": [
         "all.csv",
-        "six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -939,6 +973,14 @@
       ]
     },
     {
+      "name": "clevertap",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
+      ]
+    },
+    {
       "name": "cloudera",
       "files": [
         "all.csv",
@@ -951,6 +993,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -1036,6 +1079,12 @@
       ]
     },
     {
+      "name": "coinswitch-kuber",
+      "files": [
+        "all.csv"
+      ]
+    },
+    {
       "name": "comcast",
       "files": [
         "all.csv",
@@ -1057,7 +1106,8 @@
       "name": "compass",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -1109,6 +1159,7 @@
       "name": "cred",
       "files": [
         "all.csv",
+        "more-than-six-months.csv",
         "six-months.csv"
       ]
     },
@@ -1124,7 +1175,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1132,7 +1184,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1168,7 +1221,9 @@
       "name": "cyntexa",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1195,6 +1250,13 @@
     },
     {
       "name": "dassault-sysetmes",
+      "files": [
+        "all.csv",
+        "more-than-six-months.csv"
+      ]
+    },
+    {
+      "name": "dataart",
       "files": [
         "all.csv",
         "more-than-six-months.csv"
@@ -1258,7 +1320,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1267,6 +1330,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -1275,7 +1339,9 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1313,7 +1379,8 @@
       "name": "dialpad",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -1364,6 +1431,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -1405,7 +1473,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1459,6 +1528,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -1516,10 +1586,19 @@
       ]
     },
     {
+      "name": "equinix",
+      "files": [
+        "all.csv"
+      ]
+    },
+    {
       "name": "ericsson",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1543,7 +1622,8 @@
       "name": "ey",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -1585,6 +1665,13 @@
       ]
     },
     {
+      "name": "fanatics",
+      "files": [
+        "all.csv",
+        "more-than-six-months.csv"
+      ]
+    },
+    {
       "name": "fast",
       "files": [
         "all.csv"
@@ -1620,11 +1707,25 @@
       ]
     },
     {
+      "name": "figma",
+      "files": [
+        "all.csv"
+      ]
+    },
+    {
       "name": "fiverr",
       "files": [
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv"
+      ]
+    },
+    {
+      "name": "fivetran",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1720,7 +1821,9 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1786,7 +1889,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -1802,6 +1906,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -1823,7 +1928,8 @@
       "name": "github",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -1851,6 +1957,7 @@
       "name": "glovo",
       "files": [
         "all.csv",
+        "more-than-six-months.csv",
         "six-months.csv"
       ]
     },
@@ -1899,7 +2006,8 @@
     {
       "name": "goto",
       "files": [
-        "all.csv"
+        "all.csv",
+        "more-than-six-months.csv"
       ]
     },
     {
@@ -2012,7 +2120,8 @@
       "name": "hbo",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -2020,7 +2129,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2063,7 +2173,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2127,6 +2238,14 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv"
+      ]
+    },
+    {
+      "name": "htc",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2229,6 +2348,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -2269,7 +2389,8 @@
       "name": "intel",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -2332,7 +2453,8 @@
     {
       "name": "jd",
       "files": [
-        "all.csv"
+        "all.csv",
+        "more-than-six-months.csv"
       ]
     },
     {
@@ -2416,7 +2538,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2456,6 +2579,7 @@
       "name": "kickdrum",
       "files": [
         "all.csv",
+        "more-than-six-months.csv",
         "six-months.csv"
       ]
     },
@@ -2534,7 +2658,9 @@
       "name": "lg-electronics",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2588,6 +2714,7 @@
       "name": "livspace",
       "files": [
         "all.csv",
+        "more-than-six-months.csv",
         "six-months.csv"
       ]
     },
@@ -2595,14 +2722,17 @@
       "name": "lowe",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
       "name": "lti",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -2684,7 +2814,10 @@
       "name": "mastercard",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2692,7 +2825,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2734,6 +2868,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -2765,7 +2900,10 @@
       "name": "micro1",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2862,7 +3000,10 @@
       "name": "moloco",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -2975,6 +3116,7 @@
       "name": "natwest",
       "files": [
         "all.csv",
+        "more-than-six-months.csv",
         "six-months.csv"
       ]
     },
@@ -2982,13 +3124,15 @@
       "name": "navan",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
       "name": "naver",
       "files": [
-        "all.csv"
+        "all.csv",
+        "more-than-six-months.csv"
       ]
     },
     {
@@ -3027,6 +3171,7 @@
       "name": "netcracker-technology",
       "files": [
         "all.csv",
+        "more-than-six-months.csv",
         "six-months.csv"
       ]
     },
@@ -3104,7 +3249,9 @@
       "name": "nielsen",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -3119,7 +3266,8 @@
       "name": "nokia",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -3269,6 +3417,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -3403,7 +3552,8 @@
     {
       "name": "pega",
       "files": [
-        "all.csv"
+        "all.csv",
+        "more-than-six-months.csv"
       ]
     },
     {
@@ -3434,6 +3584,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -3459,6 +3610,12 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv"
+      ]
+    },
+    {
+      "name": "playsimple",
+      "files": [
+        "all.csv"
       ]
     },
     {
@@ -3621,7 +3778,8 @@
     {
       "name": "quantiphi",
       "files": [
-        "all.csv"
+        "all.csv",
+        "more-than-six-months.csv"
       ]
     },
     {
@@ -3637,7 +3795,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -3666,14 +3825,16 @@
     {
       "name": "rally-health",
       "files": [
-        "all.csv"
+        "all.csv",
+        "more-than-six-months.csv"
       ]
     },
     {
       "name": "ramp-2",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -3703,7 +3864,8 @@
       "name": "reddit",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -3768,7 +3930,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -3776,7 +3939,9 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -3811,7 +3976,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -3865,6 +4031,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -3873,6 +4040,13 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv"
+      ]
+    },
+    {
+      "name": "scaler",
+      "files": [
+        "all.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -3963,7 +4137,9 @@
       "name": "siemens",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -3971,7 +4147,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4069,6 +4246,12 @@
       ]
     },
     {
+      "name": "sonatus",
+      "files": [
+        "all.csv"
+      ]
+    },
+    {
       "name": "sony",
       "files": [
         "all.csv",
@@ -4088,6 +4271,15 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv"
+      ]
+    },
+    {
+      "name": "spacex",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4154,7 +4346,8 @@
       "name": "stackadapt",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -4168,6 +4361,7 @@
       "name": "starbucks",
       "files": [
         "all.csv",
+        "more-than-six-months.csv",
         "six-months.csv"
       ]
     },
@@ -4199,7 +4393,9 @@
       "name": "sumologic",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4207,7 +4403,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4216,6 +4413,14 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv"
+      ]
+    },
+    {
+      "name": "symantec",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4297,7 +4502,9 @@
       "name": "tencent",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4389,7 +4596,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4473,6 +4681,14 @@
       ]
     },
     {
+      "name": "trend-micro",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
+      ]
+    },
+    {
       "name": "trexquant",
       "files": [
         "all.csv",
@@ -4488,11 +4704,20 @@
       ]
     },
     {
+      "name": "tripactions",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
+      ]
+    },
+    {
       "name": "tripadvisor",
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4507,7 +4732,9 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4560,7 +4787,9 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4583,11 +4812,20 @@
       ]
     },
     {
+      "name": "udemy",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
+      ]
+    },
+    {
       "name": "uipath",
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4641,7 +4879,8 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4662,7 +4901,8 @@
       "name": "veeva",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv"
       ]
     },
     {
@@ -4791,7 +5031,9 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -4814,6 +5056,7 @@
         "all.csv",
         "more-than-six-months.csv",
         "six-months.csv",
+        "thirty-days.csv",
         "three-months.csv"
       ]
     },
@@ -4978,7 +5221,8 @@
     {
       "name": "yugabyte",
       "files": [
-        "all.csv"
+        "all.csv",
+        "more-than-six-months.csv"
       ]
     },
     {
@@ -5099,7 +5343,9 @@
       "name": "zoom",
       "files": [
         "all.csv",
-        "more-than-six-months.csv"
+        "more-than-six-months.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -5116,7 +5362,9 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "thirty-days.csv",
+        "three-months.csv"
       ]
     },
     {
@@ -5133,7 +5381,16 @@
       "files": [
         "all.csv",
         "more-than-six-months.csv",
-        "six-months.csv"
+        "six-months.csv",
+        "three-months.csv"
+      ]
+    },
+    {
+      "name": "zulily",
+      "files": [
+        "all.csv",
+        "six-months.csv",
+        "three-months.csv"
       ]
     },
     {
