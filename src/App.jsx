@@ -206,6 +206,11 @@ function App() {
         const freqB = parseFloat(b['Frequency %']) || 0;
         return freqB - freqA;
       }
+      if (sortBy === 'Acceptance') {
+        const accA = parseFloat(a['Acceptance %']) || 0;
+        const accB = parseFloat(b['Acceptance %']) || 0;
+        return accB - accA;
+      }
       if (sortBy === 'Title') return a.Title.localeCompare(b.Title);
       const diffMap = { 'Easy': 1, 'Medium': 2, 'Hard': 3 };
       return diffMap[a.Difficulty] - diffMap[b.Difficulty];
@@ -369,6 +374,7 @@ function App() {
                       onChange={e => setSortBy(e.target.value)}
                     >
                       <option value="Frequency">Frequency</option>
+                      <option value="Acceptance">Acceptance</option>
                       <option value="Difficulty">Difficulty</option>
                       <option value="Title">Title</option>
                     </select>
