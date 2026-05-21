@@ -29,6 +29,32 @@ try {
 
     fs.writeFileSync(outputFile, JSON.stringify(outputData, null, 2));
     console.log(`Generated companies.json with ${companyData.length} companies and date ${outputData.lastUpdated}.`);
+
+    // Build reverse index: question ID -> [company names]
+    const questionCompanies = {};
+
+    for (const company of companyData) {
+        const filesToScan = company.files.includes('all.csv') ? ['all.csv'] : company.files;
+        for (const file of filesToScan) {
+            const csvPath = path.join(dataDir, company.name, file);
+            try {
+                const lines = fs.readFileSync(csvPath, 'utf-8').split('\n').slice(1);
+                for (const line of lines) {
+                    const id = line.trim().split(',')[0].replace(/"/g, '').trim();
+                    if (id && /^\d+$/.test(id)) {
+                        if (!questionCompanies[id]) questionCompanies[id] = [];
+                        if (!questionCompanies[id].includes(company.name)) {
+                            questionCompanies[id].push(company.name);
+                        }
+                    }
+                }
+            } catch (_) { /* skip unreadable files */ }
+        }
+    }
+
+    const qcFile = path.join(__dirname, 'public/question_companies.json');
+    fs.writeFileSync(qcFile, JSON.stringify(questionCompanies));
+    console.log(`Generated question_companies.json with ${Object.keys(questionCompanies).length} questions.`);
 } catch (err) {
     console.error('Error scanning directory:', err);
 }

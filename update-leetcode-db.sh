@@ -3,8 +3,8 @@ set -euo pipefail
 
 REPO_URL="https://github.com/snehasishroy/leetcode-companywise-interview-questions.git"
 TMP_DIR="/tmp/leetcode-companywise-src"
-DATA_DIR="/Users/ayoocare/Documents/Leetcode-Companywise/public/data"
-PROJECT_DIR="/Users/ayoocare/Documents/Leetcode-Companywise"
+PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
+DATA_DIR="$PROJECT_DIR/public/data"
 
 echo "[1/3] Fetching latest data..."
 if [ -d "$TMP_DIR/.git" ]; then

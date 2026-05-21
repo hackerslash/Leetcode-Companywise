@@ -26,7 +26,8 @@ function App() {
   const [difficultyFilter, setDifficultyFilter] = useState('All');
   const [sortBy, setSortBy] = useState('Frequency');
   const [lastUpdated, setLastUpdated] = useState('');
-  const [currentView, setCurrentView] = useState('dashboard'); // 'dashboard' or 'profile'
+  const [currentView, setCurrentView] = useState('dashboard');
+  const [questionCompanies, setQuestionCompanies] = useState({});
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('theme') === 'dark' || 
@@ -85,6 +86,13 @@ function App() {
       localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
+
+  useEffect(() => {
+    fetch('/question_companies.json')
+      .then(res => res.json())
+      .then(data => setQuestionCompanies(data))
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     fetch('/companies.json')
@@ -383,13 +391,18 @@ function App() {
               </div>
             </header>
 
-            <QuestionTable 
-              questions={processedQuestions} 
+            <QuestionTable
+              questions={processedQuestions}
               loading={loading}
               error={error}
               solvedState={solvedState}
               onToggleSolved={toggleSolved}
               selectedCompany={selectedCompany?.name || ''}
+              questionCompanies={questionCompanies}
+              onSelectCompany={(cName) => {
+                const company = companies.find(c => c.name === cName);
+                if (company) { setSelectedCompany(company); window.scrollTo(0, 0); }
+              }}
             />
           </div>
         </main>
